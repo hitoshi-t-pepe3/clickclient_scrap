@@ -724,15 +724,3 @@ module ClickClientScrap
   end
 end
 
-class << Mechanize::Util
-  def from_native_charset(s, code)
-    if Mechanize.html_parser == Nokogiri::HTML
-      return unless s
-      Iconv.iconv(code, "UTF-8", s).join("") rescue s # エラーになった場合、変換前の文字列を返す
-    else
-      return s       
-    end
-  end
-end
-
-
