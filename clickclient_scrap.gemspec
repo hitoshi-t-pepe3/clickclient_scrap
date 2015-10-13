@@ -14,6 +14,6 @@ Gem::Specification.new do |spec|
   ] + spec.test_files + Dir.glob( "sample/**/*" )
   spec.has_rdoc = true
   spec.rdoc_options << "--main" << "README"
-  spec.add_dependency('mechanize', '= 1.0.0')
+  spec.add_dependency('mechanize', '>= 1.0.0')
   spec.extra_rdoc_files = ["README"]
 end
